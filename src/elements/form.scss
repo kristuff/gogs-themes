@@ -1,0 +1,143 @@
+
+// check box
+.ui.checkbox label:hover, 
+.ui.checkbox + label:hover {
+    color: var(--color-text-primary);    
+}
+
+.ui.checkbox input:checked ~ .box::after, 
+.ui.checkbox input:checked ~ label::after {
+    color: var(--color-text-accent1);
+}
+.ui.checkbox label::before {
+    background: var(--color-input-bg)!important;
+}
+
+.ui.checkbox label::after {
+    color: var(--color-text-primary);
+}
+.ui.checkbox label, 
+.ui.checkbox + label,
+.ui.checkbox .box::after, 
+.ui.checkbox label::after {
+    color: var(--color-text-primary);
+
+    &:hover {
+        color: var(--color-text-accent2);
+    }
+}
+.ui.checkbox input:focus ~ label {
+    color: var(--color-text-accent1)!important;    
+}
+
+.ui.checkbox .box::before, .ui.checkbox label::before {
+    border-color: var(--color-border)!important;
+}
+
+// required marker
+.ui.form .required.field > .checkbox::after, 
+.ui.form .required.field > label::after, 
+.ui.form .required.fields.grouped > label::after, 
+.ui.form .required.fields:not(.grouped) > .field > .checkbox::after, 
+.ui.form .required.fields:not(.grouped) > .field > label::after {
+    color: var(--color-active);    
+}
+
+// input style
+.ui.form textarea,
+.ui.form input:not([type]), 
+.ui.form input[type="date"], 
+.ui.form input[type="datetime-local"], 
+.ui.form input[type="email"], 
+.ui.form input[type="file"], 
+.ui.form input[type="number"],
+.ui.form input[type="password"], 
+.ui.form input[type="search"], 
+.ui.form input[type="tel"],
+.ui.form input[type="text"],
+.ui.form input[type="time"], 
+.ui.form input[type="url"] {
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-border-light);
+    color: var(--color-text-primary);
+
+    &:focus {
+        background-color: var(--color-input-bg);
+        color: var(--color-text-accent1);
+        border: 1px solid var(--color-active);
+    }
+}
+
+.ui.input.focus > input, 
+.ui.input > input:focus,
+.ui.input > input {
+    background-color: var(--color-input-bg);
+}
+
+
+
+// search bar 
+.admin.user .ui.action.input:not([class*="left action"]) > input,
+.explore.users .ui.action.input:not([class*="left action"]) > input,
+.explore.repositories .ui.action.input:not([class*="left action"]) > input {
+    border-radius: 100em!important ;
+    border-right-color: var(--color-border)!important;
+    position: relative;
+    padding-right: 120px;
+    padding-left: 15px;
+    height: 42px;
+    width: 100%!important;
+    border-radius: 100em;
+    
+    &.active {
+        border-right-color: var(--color-border)!important;
+        border-radius: 100em;
+    }
+
+    + .button {
+        position: absolute;
+        right: 0;
+        height: 42px;
+        border-radius: 100em!important;
+    }
+}
+
+
+.user.signin .ui.form .field:last-child {
+    text-align: center;
+
+    a {
+        color: var(--color-text-primary);
+        font-size: .95rem;
+
+        &:hover {
+            color: var(--color-text-accent2);
+        }
+    }
+}
+
+.ui.input.focus > input, 
+.ui.input > input:focus {
+    color: var(--color-text-accent1)!important;
+}
+
+.ui.input {
+    color: var(--color-text-primary);
+}
+
+.ui.input.focus > input, 
+.ui.input > input:focus {
+    border-color: var(--color-border);
+}
+
+.ui.attached.segment {
+    border: none;
+}
+
+.ui.form .inline.field > label, 
+.ui.form .inline.field > p, 
+.ui.form .inline.fields .field > label, 
+.ui.form .inline.fields .field > p, 
+.ui.form .inline.fields > label {
+    color:var(--color-text-accent1);
+}

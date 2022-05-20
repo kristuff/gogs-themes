@@ -1,0 +1,222 @@
+// Fixed top header 
+.following.bar {
+
+    &.light {
+        background-color: var(--color-bg-secondary) !important;
+        border-bottom: 1px solid var(--color-bg-secondary);
+        color: var(--color-text-accent1) !important;
+        position: fixed;
+        top: 0;
+    }
+
+    .top.menu {
+
+        @media (max-width: 767px) {
+            display: flex;
+            overflow-x: auto;
+        }
+
+
+        .octicon {
+            color: var(--color-text-accent1);
+        }
+
+        a.item.brand {
+           color: var(--color-text-accent1) !important;
+        }   
+        > a.item:not(.brand) {
+            padding-left: 20px;
+            padding-right: 20px;
+            color: var(--color-text-accent1) !important;
+
+            // hide help menu
+            &[target="_blank"]{
+                display: none;
+            }
+        }
+        a.item:not(.brand):hover,
+        .dropdown.item:hover,
+        .dropdown.item.active {
+            background: rgba(0,0,0,.20)!important;
+            color: var(--color-text-accent2)!important;
+        }
+    }
+}
+
+.ui.secondary.menu .item {
+    
+    &:not(.brand).active,
+    &:not(.brand):hover,
+    &:not(.brand).active:hover {
+        border-radius: 5px;
+        background: none!important;
+        color:var(--color-text-accent2)!important;
+    }
+
+    &:not(.brand){
+        margin: 0;
+    }
+}
+
+.following.bar .head.link.item {
+    color: var(--color-text-accent1) !important;
+}
+
+
+.ui.vertical.menu {
+    background: none;
+}
+
+.ui.vertical.menu .item,
+.ui.secondary.menu .item {
+    background: none;
+    color: var(--color-text-accent1);
+    border-radius: 0;
+
+    &.active {
+        background:none;
+        font-weight: 600;
+        color: var(--color-text-accent1);
+    }
+    &:hover {
+        background: none;
+        color: var(--color-text-accent2);
+    }
+}
+
+@media (min-width: 1024px) {
+   .ui.vertical.menu {
+       border: 1px solid var(--color-border);
+
+        .active.item {
+            border-left: 3px solid var(--color-active);
+            background: var(--color-bg-secondary);
+        }
+    }
+}
+   
+
+.ui.vertical.menu .header.item {
+    background: none;
+    color: var(--color-text-accent1);
+    text-align: center;
+    padding-left: 0;
+}
+
+.ui.basic.button, 
+.ui.basic.buttons .button {
+    border: 1px solid var(--color-border);
+}
+
+.ui.dropdown .menu,
+.ui.menu .dropdown.item .menu,
+.ui.menu .ui.dropdown .menu > .item:hover {
+    background: var(--color-bg-secondary)!important;
+}
+
+.ui.dropdown .menu .selected.item, 
+.ui.dropdown.selected,
+.ui.dropdown .menu > .header,
+.ui.dropdown .menu > .item {
+    color: var(--color-text-accent1)!important;
+}
+
+.ui.menu .ui.dropdown .menu > .active.item,
+.ui.menu .ui.dropdown .menu > .item:hover,
+.ui.menu .ui.dropdown .menu > .selected.item,
+.ui.dropdown .menu > .item:hover,
+.ui.link.menu .item:hover, 
+.ui.menu .dropdown.item:hover, 
+.ui.menu .link.item:hover, 
+.ui.menu a.item:hover{
+    color:var(--color-text-accent2)!important;
+}
+
+.ui.menu {
+
+    .item.active, 
+    .ui.menu .item.active:hover {
+        font-weight: bold;
+    }
+
+    background: none !important;
+    color: var(--color-text-primary) !important;
+
+    .ui.dropdown .menu>.item {
+        color: var(--color-text-primary) !important;
+        background-color: var(--color-bg-secondary) !important;
+    }
+
+    .item {
+        border-bottom: 3px solid transparent; 
+        color:var(--color-text-accent1);
+
+        &.active,
+        &.active:hover,
+        &:hover {
+            color:var(--color-text-accent2);
+        }
+    }
+
+    &:not(.vertical) .item.active {
+        border-bottom-color: var(--color-active) ;
+    }
+}
+
+.ui.fluid.basic.button.center.ajax-load-button {
+    border-radius: 100em;
+    
+    &:hover {
+        background-color: var(--color-bt-light-hover);
+        color:var(--color-text-accent1)
+    }
+}
+
+#clone-panel  {
+    .ui.input > input {
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+
+        .ui.input.focus > input, 
+        .ui.input > input:focus {
+            background: var(--color-input-bg);
+            color: var(--color-text-accent1);
+        }
+    }
+    .ui.basic.button:first-child {
+        border: none;
+    }
+    .ui.basic.button:last-child {
+        border-left: none;
+    }
+}
+
+.ui.buttons>.ui.dropdown:last-child .menu,
+.ui.menu .right.dropdown.item .menu,
+.ui.menu .right.menu .dropdown:last-child .menu {
+    background-color: var(--color-bg-secondary) !important;
+}
+
+.ui.menu > .item:first-child,
+.user.profile .ui.secondary.menu .item:not(.brand).active {
+    border-radius: 0;
+} 
+
+
+.ui.button {
+    background-color: var(--color-button-bg);
+
+    &:hover {
+        background-color: var(--color-button-bg-hover);
+    }
+}
+
+.ui.selection.dropdown {
+    color:var(--color-text-primary);
+    background-color: var(--color-input-bg);
+    border-color: var(--color-border);
+
+    &.active {
+        border-color: var(--color-active);
+    }
+}

@@ -1,0 +1,279 @@
+
+// full size layout
+body:not(.full-width) {
+    min-width:100%;
+}
+.full.height {
+    margin-bottom: -60px;
+    min-height: calc(100% - 60px);
+}
+
+// fix top padding due to fixed header
+.explore, 
+.organization,
+.repository,
+.dashboard,
+.admin,
+.user:not(.context):not(.list) {
+    padding-top: 80px;
+}
+
+.home {
+    padding-top: 20px;
+
+    .stackable {
+        padding-top: 40px;
+    }
+
+    // for mobile 
+    .logo img {
+        max-width: 100%;
+    }
+}
+
+footer {
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+
+    // hide external links
+    .container .links > a[target="_blank"]{
+        display: none;
+    } 
+
+
+    > .ui.container {
+        border-top: 1px solid var(--color-border-xlight);
+
+        
+    .ui.left::after {
+        display: inline-flex;
+        content: " - Custom Theme by @Kristuff";
+    }
+        @media only screen and (max-width: 767px){
+            text-align: center!important;
+
+            .ui.right,
+            .ui.left {
+                float: initial;
+            }
+        }
+
+        @media only screen and (max-width: 1023px){
+            width: calc(100% - 24px);
+            margin: 0 auto;
+        }
+
+    }
+}
+
+.ui.card > .image:not(.ui) > img, 
+.ui.cards > .card > .image:not(.ui) > img {
+    border-radius: 50%;
+    margin: 12px;
+    width: calc(100% - 24px);
+}
+
+.user.profile .ui.card .profile-avatar {
+    height: initial;
+    background: none;
+}
+
+@media only screen and (max-width: 767px){
+
+    .markdown:not(code).file-view {
+        padding: 1em 1em 1em !important;
+    }
+    
+   .repository #git-stats + .ui.menu {
+        flex-wrap: wrap;
+
+        .right.fitted.item{
+            margin-top: 12px;
+            width: 100%;
+
+            #clone-panel {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    .ui.container {
+        width: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 10px;
+    }
+
+
+    .ui.card, .ui.cards > .card {
+        width: 100%;
+        height: 192px;
+
+        .content{
+            position: absolute;
+            left: 94px;
+            right: 0;
+
+            .center {
+                text-align: left;
+            }
+        }
+        .extra.content {
+            position: absolute;
+            left: 94px;
+            top: 50px;
+            right: 12px;
+        }
+
+    }
+    .user.profile .ui.card .profile-avatar {
+        width: 90px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .ui.container {
+        width: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 18px;
+    }
+
+    .ui.card, .ui.cards > .card {
+        width: 100%;
+        height: 192px;
+
+        .content{
+            position: absolute;
+            left: 204px;
+            right: 0;
+
+            .center {
+                text-align: left;
+            }
+
+        }
+        .extra.content {
+            position: absolute;
+            left: 204px;
+            top: 50px;
+            right: 0;
+        }
+
+    }
+    .user.profile .ui.card .profile-avatar {
+        width: 192px;
+        height: initial;
+    }
+
+}
+
+// *vertical* menu display horizontaly on mobile/tab 
+@media (max-width: 1023px) {
+
+    .ui.menu {
+        border-radius: 0;
+    }
+
+    .ui.vertical.menu {
+        display: flex;
+        flex-direction:row ;
+        width: 100%;
+        border-bottom: 1px solid var(--color-border);
+        overflow-x: auto;
+
+        .header {
+            display: none;
+        }
+
+        .item {
+            border: none;
+            border-bottom: 3px solid transparent;
+
+            &:hover {
+                border-bottom-color: var(--color-border-xlight);
+            }
+
+            &.active {
+                border-bottom-color: var(--color-active);
+            }
+        }
+    }
+
+    .ui.container:not(.fluid) {
+        width: 100% !important;
+    }
+    .ui.column.grid > [class*="eleven wide"].column, 
+    .ui.grid > .column.row > [class*="eleven wide"].column, 
+    .ui.grid > .row > [class*="eleven wide"].column, 
+    .ui.grid > [class*="eleven wide"].column,
+    .ui.column.grid > [class*="five wide"].column, 
+    .ui.grid > .column.row > [class*="five wide"].column, 
+    .ui.grid > .row > [class*="five wide"].column, 
+    .ui.grid > [class*="five wide"].column,
+    .ui.column.grid > [class*="four wide"].column, 
+    .ui.grid > .column.row > [class*="four wide"].column, 
+    .ui.grid > .row > [class*="four wide"].column, 
+    .ui.grid > [class*="four wide"].column,
+    .ui.column.grid > [class*="twelve wide"].column,
+    .ui.grid > .column.row > [class*="twelve wide"].column, 
+    .ui.grid > .row > [class*="twelve wide"].column, 
+    .ui.grid > [class*="twelve wide"].column {
+        width: 100% !important;
+    }
+
+}
+
+// fix dashboard feeds diplay on mobile 
+@media (max-width: 767px) {
+
+    .dashboard.feeds .ui.grid {
+        flex-direction: column-reverse;
+
+        & > [class*="ten wide"].column,
+        & > [class*="six wide"].column {
+            width: 100%!important;
+        }
+    }
+}
+
+// fix login form layout
+.user.activate form, 
+.user.forgot.password form, 
+.user.reset.password form, 
+.user.signin form, 
+.user.signup form {
+    width: 100%!important;
+    max-width: 380px;
+    border-radius: 7px;
+
+    .header {
+        padding: 15px!important;
+        margin: 0;
+        background: none;
+    }
+
+    .inline.field > label {
+        display: block;
+        text-align: left;
+        margin-bottom: 6px!important;
+    }
+
+    input, 
+    textarea {
+        width: 100%!important;
+    }
+}
+
+// full-width on login form button
+.user.signin .ui.form .ui.button {
+    margin-bottom: 12px;
+    width: 100%;
+    border-radius: 100em;
+    height: 45px;
+}
+

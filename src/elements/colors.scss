@@ -1,0 +1,304 @@
+:root {
+    --color-bg-primary      : #1e2329;  
+    --color-bg-secondary    : #292e35;  
+
+    --color-text-primary    : #8b8b8b;
+    --color-text-light      : #424851;
+    --color-icon            : #3e4248;
+  
+    --color-text-accent1    : #c9c8c8;
+    --color-text-accent2    : #ffffff;
+
+    --color-border          : #3b4251;
+    --color-border-light    : #343a42;
+    --color-border-xlight   : #313a44;
+    
+    --color-badge-bg        : #2d333b;  
+    --color-input-bg        : rgba(0,0,0,.15);  
+    --color-bt-light        : #2d333b;  
+    --color-bt-light-hover  : #323841;  
+
+    --color-button-bg       : #0c0c0c;  
+    --color-button-bg-hover : #000;  
+
+
+    // code
+    --color-code            : #c6c6c6;
+    --color-code-bg         : #191d22;
+    --color-pre-bg          : #292d35;
+    --color-pre-scrollbar1  : #313137;
+    --color-pre-scrollbar2  : #171b20;
+}
+
+* {
+    scrollbar-color: #313137 #171b20;
+}
+
+.home .hero .octicon,
+.home a {
+    color:var(--color-active);
+}
+
+body:not(.full-width) {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+}
+
+a {
+    color: var(--color-text-accent1);
+
+    &:hover {
+        color: var(--color-text-accent2);
+    }
+}
+
+.ui .text.black:hover {
+    color: #fff;
+}
+
+.repository.file.list #repo-files-table tbody .octicon.octicon-file-directory, 
+.repository.file.list #repo-files-table tbody .octicon.octicon-file-submodule {
+    color:var(--color-icon);
+}
+
+.ui.list .list > .item .description, 
+.ui.list > .item .description {
+    color:var(--color-text-primary);
+}
+
+h2,
+h3,
+h4,
+h5,
+.ui.header,
+.ui.menu,
+.ui.input input,
+.ui.button:not(.label) {
+    color: var(--color-text-accent1);
+}
+
+h1 {
+    color: var(--color-text-accent2);
+}
+
+.markdown:not(code) h1 .octicon-link, 
+.markdown:not(code) h2 .octicon-link, 
+.markdown:not(code) h3 .octicon-link, 
+.markdown:not(code) h4 .octicon-link, 
+.markdown:not(code) h5 .octicon-link, 
+.markdown:not(code) h6 .octicon-link {
+    color: var(--color-text-light);
+
+}
+
+.ui.card, 
+.ui.cards > .card {
+    background:var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    box-shadow:none;
+}
+.ui.secondary.pointing.menu {
+    border-color: var(--color-border);
+}
+.ui.secondary.pointing.menu .active.item {
+    border-color: var(--color-active);
+}
+
+.ui.dropdown .menu > .divider {
+    border-color: var(--color-border);    
+}
+.ui.form .field > label {
+    color:var(--color-text-accent1);
+}
+.ui .warning.header {
+    background-color: var(--color-bg-secondary) !important;
+    color:var(--color-text-accent1);
+}
+.settings .hook.list > .item:not(:last-child) {
+    border-color: var(--color-border-light) !important;
+}
+
+.ui.card .content:not(.extra) {
+    color:var(--color-text-accent1);
+    font-weight: bold;
+}
+
+.ui.card > .extra a:not(.ui),
+.ui.cards > .card > .extra a:not(.ui),
+.ui.card .text.black{
+    color:var(--color-text-primary);
+}
+
+.ui.user.list .item .description a {
+    color:var(--color-text-accent1);
+
+    &:hover{
+        color:var(--color-text-accent2);
+    }
+
+}
+.user.profile .ui.card .extra.content ul li:not(:last-child) {
+    border-color: var(--color-border-xlight);
+}
+
+.ui.accordion .title:not(.ui),
+.ui .text.black,
+.ui .text.black a {
+    color: var(--color-text-primary);
+}
+
+.ui.label {
+    color: var(--color-text-accent1);
+    background: var(--color-input-bg);
+
+    &a:hover {
+        color: var(--color-text-accent2);
+    }
+
+    &.basic {
+        color: var(--color-text-accent1);
+        border: 1px solid var(--color-border);
+    }
+
+
+}
+.markdown:not(code) .highlight pre, .markdown:not(code) pre {
+    background-color: var(--color-bg-secondary);
+}
+
+.feeds .list ul li.private {
+    background-color: var(--color-bg-secondary);
+}
+.feeds .list ul li:not(:last-child) {
+    border-color: var(--color-border-light);    
+}
+.dashboard .six.wide.column .menu {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ui .info.segment.top {
+    background-color: var(--color-bg-secondary) !important;
+}
+.ui[class*="top attached"].segment {
+    border-radius: 7px;
+}
+.repository .diff-file-box .code-diff tbody tr.tag-code td {
+    background-color: var(--color-bg-primary) !important;
+    border-color: var(--color-border-light) !important;
+}
+.repository .diff-file-box .file-body.file-code .lines-num {
+    background-color: var(--color-bg-primary) !important;
+
+}
+.repository .diff-file-box .code-diff .lines-num,
+.repository .diff-file-box .file-body.file-code .lines-num-old {
+    border-right-color: var(--color-border-light)!important;
+}
+.repository .diff-file-box .code-diff tbody tr.add-code td,
+.repository .diff-file-box .code-diff tbody tr.del-code td {
+    background-color: var(--color-bg-secondary) !important;
+    border-color: var(--color-border) !important;
+}
+
+.repository .diff-file-box .code-diff tbody tr .removed-code {
+    background-color: rgb(215, 47, 47);
+    color: #fff!important;
+}
+.repository .diff-file-box .code-diff tbody tr .added-code {
+    background-color: rgb(31, 185, 31);
+    color: #fff !important;
+}
+
+
+
+.ui.grey.label, 
+.ui.grey.labels .label {
+    border-color: var(--color-badge-bg)!important;
+}
+.ui.menu .item > .label {
+    background-color: var(--color-badge-bg);
+}
+
+.fitted.item.choose.reference .menu .header .text {
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+
+    &.black {
+        border-color: var(--color-active);
+    }
+} 
+
+.ui .text.black {
+    color:#fff;
+}
+
+.ui.selectable.table tbody tr:hover, 
+.ui.table tbody tr td.selectable:hover {
+    color:var(--color-text-accent1);
+}
+
+// buttons 
+.ui.blue.button, 
+.ui.blue.buttons .button,
+.ui.green.button, 
+.ui.green.buttons .button {
+    background-color: var(--color-active-darker);
+
+    &:hover {
+        background-color: var(--color-active);
+    }
+}
+
+
+// code 
+.hljs {
+    color:var(--color-text-primary)!important;
+}
+.hljs-keyword, 
+.hljs-selector-tag, 
+.hljs-subst{
+    color:var(--color-text-accent)!important;
+}
+
+.hljs-built_in, 
+.hljs-builtin-name,
+.hljs-number, 
+.hljs-literal, 
+.hljs-variable, 
+.hljs-template-variable, 
+.hljs-tag .hljs-attr {
+    color: #0acccc!important;
+}
+
+.hljs-string, 
+.hljs-doctag {
+    color: #fd6d26!important;
+}
+
+// login/... forms
+.user.activate form, 
+.user.forgot.password form, 
+.user.reset.password form, 
+.user.signin form, 
+.user.signup form {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+}
+
+// footer
+footer {
+    border-top: none;
+    color: var(--color-text-light) !important;
+    background-color: var(--color-bg-primary);
+
+    .container .links > * {
+        border-left: 1px solid var(--color-border-xlight);
+    }
+}
+
+// ?
+.ui.segment,
+.ui.attached.header {
+    background: none;
+    border: none;
+}

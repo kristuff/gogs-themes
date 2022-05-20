@@ -1,0 +1,4 @@
+@import '../_header.scss';
+@import '../_helper.scss';
+@include themeColor(#e4c515, #d4b712);
+@import '../elements/*.scss';

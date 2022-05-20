@@ -1,0 +1,6 @@
+@mixin themeColor($color, $colorDarker) {
+    :root {
+        --color-active          : #{$color};
+        --color-active-darker   : #{$colorDarker};
+    }        
+}
